@@ -1,0 +1,29 @@
+@media screen {
+    body{
+        display: grid;
+        grid-template-columns: 450px 900px;
+        gap:100px;
+    }
+    .cot1{
+        background-color: black;
+        color: white;
+        padding-left: 20px;
+        line-height: 1.5;
+    }
+    .cot2{
+        margin-top:20px;
+        margin-right: 100px;
+    }
+    p{
+        font-size: large;
+    }
+    .avatar{
+        margin-left:100px;
+        margin-top:20px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        width:200px;
+        height:200px;
+        object-fit: cover;
+    }
+}

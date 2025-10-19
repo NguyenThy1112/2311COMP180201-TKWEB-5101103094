@@ -1,0 +1,135 @@
+@media screen {
+    #navy{
+        background-color: rgb(85, 75, 61);
+        height: 100px;
+    }
+    .nav-item img{
+        margin:10px;
+    }
+    .nav-item p{
+        color: orange;
+        margin:25px;
+        padding-top: 10px;
+        font-size: x-large;
+        padding-right: 50px;
+        font-family:'Times New Romans';
+    }
+    .nav-item a{
+        margin: 20px;
+        padding-top: 15px;
+        border-radius: 10px;
+        color: orangered;
+    }
+    .nav-item a:visited{
+        text-decoration: none;
+        color: white;
+    }
+    .nav-item a:hover{
+        text-decoration: none;
+        color: orangered;
+    }
+    .trangchu{
+        background-color: rgb(32, 32, 32);
+        height: 1500px;
+        width: 100%;
+    }
+    #cat{
+        position: absolute;
+        left:1000px;
+        top:625px;
+        transform: rotate3d(1,5,1,45deg);
+    }
+    #home1{
+        position: absolute;
+        left:200px;
+        top:425px;
+        transform: scaleX(-1);
+        transform: rotate3d(-4,-4,-2,35deg);
+    }
+    #home{
+        position: absolute;
+        left:450px;
+        top:200px;
+        transform: rotate3d(-4,-3,-2,-35deg);
+    }
+    #pum1{
+        position: absolute;
+        left:90px;
+        top:900px;
+        transform: rotate(10deg);
+    }
+    #pum2{
+        position: absolute;
+        left:125px;
+        top:800px;
+        transform: rotate(-15deg);
+        transform: rotate3d(1,-4,1,30deg);
+    }
+    #pum3{
+        position: absolute;
+        left:145px;
+        top:735px;
+        transform: rotate(10deg);
+        transform: rotate3d(1,5,1,45deg);
+    }
+    #soul{
+        position: absolute;
+        left:90px;
+        top: 250px;
+        transform: rotate3d(-4,-4,3,40deg);
+    }
+    #net1{
+        position: absolute;
+        left:1100px;
+        top: 150px;
+        transform: rotate3d(-4,-4,3,40deg);
+    }
+     #net2{
+        position: absolute;
+        left:1050px;
+        top: 900px;
+        transform: rotate3d(-4,-4,3,-40deg);
+    }
+    #hallo{
+        position: absolute;
+        top: 750px;
+        left: 350px;
+    }
+    #noidung{
+        position:absolute;
+        top: 1100px;
+        text-align: center;
+        color: antiquewhite;
+        padding: 20px;
+        margin: 90px;
+        border: 2px solid;
+        border-radius: 10px;
+    }
+    #card{
+        /* position: absolute; */
+        background-color: rgb(52, 52, 58);
+        border: 1px solid white;
+        font-size: large;
+        padding: 20px;
+        color: white;
+        text-align: center;
+        margin: 20px;
+    }
+    #dangky{
+        background-color: rgb(218, 68, 14);
+        border: 2px solid rgb(150, 150, 150);
+        color: white;
+        border-radius: 10px;
+        width: 600px;
+        margin: 50px 100px 10px 250px;
+        font-family: 'Times New Roman', Times, serif;
+        padding:5px;
+    }
+    .cont{
+        font-size: x-large;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        margin: 20px;
+    }
+}

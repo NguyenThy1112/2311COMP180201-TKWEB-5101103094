@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Quản lý các sản phẩm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        #con{
+            font-weight: bold;
+        }
+        #bang{
+            width:100%;
+        }
+        #bang td:nth-child(1){
+            width:"50%";
+        }
+        #bang td:nth-child(2){
+            width:"25%";
+        }
+        #bang td:nth-child(3){
+            width:"25%";
+        }
+        .action-button{
+            height:25px;
+            width:25px;
+        }
+    </style>
+</head>
+<body class="container">
+    <h2>Add New Product</h2>
+    <br>
+    <form class="row g-1" id="addbar">
+        <div class="col-md-5">
+            <input type="text" placeholder="New Product" class="form-control" id="newitem" val="">
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary" onclick="add()">Add</button>
+        </div>
+    </form>
+    <br>
+    <h2>Display All Product</h2>
+    <br>
+    <nav>
+        <div class="container">
+            <div class="row g-1">
+                <div class="col-md-11"><span class="navbar-brand mb-0 h1">Product Name</span></div>
+                <div class="col-md-1"><span id="con"></span></div>
+            </div>
+        </div>
+    </nav>
+    <table id="bang">
+        <tbody id="ds"></tbody>
+    </table>
+    <script>
+        var dssp=['Sony Xperia','Samsung Galaxy','Nokia 6','Xiaomi Redmi Note 4','Apple iPhone 6S','Xiaomi Mi 5s Plus','Apple iPhone 8 plus','Fujitsu F-04E','Oppo A71'];
+        function thanh(){
+            var k="";
+            k+='<div class="col-md-5"><input type="text" placeholder="New Product" class="form-control" id="newitem" val=""></div><div class="col-md-2"><button type="button" class="btn btn-primary" onclick="add()">Add</button></div>';
+            return k;
+        }
+        function edit(index){
+            var newname=prompt("Nhập tên mới: ");
+            dssp[index]=newname;
+            document.getElementById('ds').innerHTML=show();
+        }
+        function del(index){
+            dssp.splice(index,1);
+            document.getElementById('ds').innerHTML=show();
+        }
+        function add(){
+            var addnew=document.getElementById('newitem').value;
+            dssp.push(addnew);
+            
+            document.getElementById('ds').innerHTML=show();
+        }
+        function show(){
+            var s="";
+            for(var i=0;i<dssp.length;i++){
+                if(i%2!=0){
+                    s+='<tr style="background-color:lightgrey;">';
+                    s+='<td>'+ dssp[i]+'</td>';
+                    s+='<td><button class="btn btn-primary" onclick="edit('+i+')">Edit</button></td>';
+                    s+='<td><button class="btn btn-primary" onclick="del('+i+')">Delete</button></td>';
+                    s+='</tr>';
+                }
+                else{
+                    s+='<tr>';
+                    s+='<td>'+ dssp[i]+'</td>';
+                    s+='<td><button class="btn btn-primary" onclick="edit('+i+')">Edit</button></td>';
+                    s+='<td><button class="btn btn-primary" onclick="del('+i+')">Delete</button></td>';
+                    s+='</tr>';
+                }
+            }
+            document.getElementById('addbar').innerHTML=thanh();
+            document.getElementById('con').innerHTML=dssp.length+'<b> products</b>';
+            return s;
+        }
+        document.getElementById('ds').innerHTML=show();
+    </script>
+</body>
+</html>
