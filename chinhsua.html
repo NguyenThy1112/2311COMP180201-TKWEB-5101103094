@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+</head>
+<body>
+    
+    <h1><b>Các sản phẩm: </b></h1>
+    <div id="ds">
+    </div>
+    <br>
+    <button onclick="add()">Add</button>
+    <button onclick="edit()">Edit</button>
+    <button onclick="del()">Delete</button>
+    <script>
+        var dssp=['Banh Kem','Sua','Duong'];
+        function show(){
+            var s="";
+            for(var i=0;i<dssp.length;i++){
+                s+=(i+1)+". "+dssp[i]+'<br>';
+            }
+            return s;
+        }
+        function add(){
+            var spmoi=prompt("Nhập vào sản phẩm mới: ");
+            dssp.push(spmoi);
+            document.getElementById('ds').innerHTML=show();
+        }
+        function edit(){
+            var vitri=prompt("Vị trí cần sửa: ");
+            var newname=prompt("Nhập vào tên sản phẩm cần sửa: ");
+            dssp[vitri-1]=newname;
+            document.getElementById('ds').innerHTML=show();
+        }
+        function del(){
+            var vitricanxoa=prompt("Nhập vào vị trí cần xóa: ");
+            dssp.splice(vitricanxoa-1,1);
+            document.getElementById('ds').innerHTML=show();
+        }
+        document.getElementById('ds').innerHTML=show();
+    </script>
+</body>
+</html>

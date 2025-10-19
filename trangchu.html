@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @media screen {
+            .cont{
+                float:center;
+                padding:0 10% 0 10%;
+            }
+            .header{
+                height:100px;
+                background-color: yellow;
+                margin:auto;
+            }
+            .icon{
+                float:right;
+            }
+            .menu{
+                display:flex;
+                /* padding: 0 10px; */
+                margin:auto;
+                padding-top: -20px;
+                height:50px;
+                background-color: rgb(71, 68, 68);
+            }
+            .menu ul li{
+                list-style-type: none;
+                float: left;
+            }
+            .menu ul li a{
+                text-decoration: none;
+                color: white;
+                padding: 0 30px;
+            }
+            .menu ul li a:hover{
+                background-color: white;
+                color: black;
+                display: block;
+                border-bottom: 2px solid red;
+                line-height: 50px;
+                margin-top: -18px;
+            }
+            .img{
+                float:right;
+                padding-top:10px;
+                padding-left: 450px;
+            }
+            .container{
+                display: grid;
+                grid-template-columns: 20% 80%;
+            }
+            .cont1{
+                background-color: aqua;
+                height: 500px;
+            }
+            .cont2{
+                display:grid;
+            }
+            .tieude{
+                height: 60px;
+                background-color: red;
+                padding-left: 5px;
+            } 
+            .chitiet{
+                background-color: palevioletred;
+                height: 440px;
+                padding-left:5px;
+            }
+            .footer{
+                height:20px;
+                background-color: brown;
+                color:aliceblue;
+                text-align: center;
+            }
+        }
+        
+    </style>
+</head>
+<body class="cont">
+    <div class="header">
+        <div class="icon">
+            <img src="images/32x32/facebook.png">
+            <img src="images/32x32/google_plus.png">
+            <img src="images/32x32/youtube.png">
+            <img src="images/32x32/yahoo.png">
+        </div>
+    </div>
+    <div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a> </li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+            <div class="img">
+                <img src="images/en.gif">
+                <img src="images/vn.gif">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="cont1"></div>
+        <div class="cont2">
+            <div class="tieude"><h2 style="color:white;">Tiêu đề</h2></div>
+            <div class="chitiet"><p>Chi tiết</p></div>           
+        </div>
+    </div>
+    <div class="footer">
+        Bản quyền thuộc về&copy; HIENLTH 2022.
+    </div>
+</body>
+</html>
