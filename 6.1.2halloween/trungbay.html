@@ -33,6 +33,12 @@
         <li class="nav-item">
             <a class="nav-link" href="lienhe.html">Liên hệ</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="video.html">Video</a>
+        </li>
+        <li class="nav-item">
+            <div><button id="nhacnen">Bật nhạc</button></div>
+        </li>
     </ul>
     <div class="trangchu">
         <div class="container" style="color: white;display: grid;grid-template-columns: 50% 50%;">
@@ -106,5 +112,22 @@
         </div>
     </div>
     <p style="text-align: center;background-color: orange;">Nếu muốn mua các sản phẩm trên vui lòng liên hệ với chúng tôi qua trang liên hệ</p>
+    <audio id="nhac" loop>
+        <source src="images/sounds.wav" type="audio/wav">
+    </audio>
+    <script>
+        let playing = false;
+        nhacnen.addEventListener("click", () => {
+        if (playing) {
+            nhac.pause();
+            nhacnen.textContent = "Phát nhạc";
+            playing=false;
+        } else {
+            nhac.play();
+            nhacnen.textContent = "Tắt nhạc";
+            playing=true;
+        }
+        });
+    </script>
 </body>
 </html>

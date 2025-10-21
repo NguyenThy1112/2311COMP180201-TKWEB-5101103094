@@ -33,6 +33,12 @@
         <li class="nav-item">
             <a class="nav-link" href="lienhe.html">Liên hệ</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="video.html">Video</a>
+        </li>
+        <li class="nav-item">
+            <div><button id="nhacnen">Bật nhạc</button></div>
+        </li>
     </ul>
     <div class="trangchu">
         <img src="images/Iconcreme-Halloween-Cat.512.png" width="150" id="cat">
@@ -50,6 +56,22 @@
             <p>Lịch sử của lễ hội Halloween bắt nguồn từ lễ hội Samhain của người Celt cổ đại ở Ireland, Anh và miền Bắc Pháp, đánh dấu sự chuyển giao giữa mùa hè và mùa đông. Người Celt tin rằng vào đêm 31/10, ranh giới giữa thế giới người sống và người chết mờ nhạt nhất, cho phép các linh hồn về trần gian. Họ dập tắt lửa, đốt lửa lớn để xua đuổi tà ma và đeo trang phục kỳ lạ để ngụy trang. Khi Kitô giáo lan rộng, các lễ hội này dần được kết hợp với Ngày Lễ Các Thánh (All Saints' Day) vào ngày 1/11, và đêm trước đó (All Hallows' Eve) trở thành Halloween. Halloween trở nên phổ biến trên toàn cầu khi người Ireland di cư đến Mỹ vào thế kỷ 19.</p>
         </div>
     </div>
-    
+    <audio id="nhac" loop>
+        <source src="images/sounds.wav" type="audio/wav">
+    </audio>
+    <script>
+        let playing = false;
+        nhacnen.addEventListener("click", () => {
+        if (playing) {
+            nhac.pause();
+            nhacnen.textContent = "Phát nhạc";
+            playing=false;
+        } else {
+            nhac.play();
+            nhacnen.textContent = "Tắt nhạc";
+            playing=true;
+        }
+        });
+    </script>
 </body>
 </html>

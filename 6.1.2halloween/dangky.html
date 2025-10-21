@@ -34,6 +34,12 @@
         <li class="nav-item">
             <a class="nav-link" href="lienhe.html">Liên hệ</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="video.html">Video</a>
+        </li>
+        <li class="nav-item">
+            <div><button id="nhacnen">Bật nhạc</button></div>
+        </li>
     </ul>
     <div class="trangchu" style="height: 900px;">
         <div class="container" style="padding: 20px;">
@@ -58,5 +64,22 @@
             <h1 style="color: rgb(240, 110, 5);text-align: center; background-color: rgb(255, 191, 72); border-radius: 20px;margin-top: 50px;">CHÚC BẠN CÓ MỘT NGÀY HALLOWEEN VUI VẺ</h1>
         </div>
     </div>
+    <audio id="nhac" loop>
+        <source src="images/sounds.wav" type="audio/wav">
+    </audio>
+    <script>
+        let playing = false;
+        nhacnen.addEventListener("click", () => {
+        if (playing) {
+            nhac.pause();
+            nhacnen.textContent = "Phát nhạc";
+            playing=false;
+        } else {
+            nhac.play();
+            nhacnen.textContent = "Tắt nhạc";
+            playing=true;
+        }
+        });
+    </script>
 </body>
 </html>

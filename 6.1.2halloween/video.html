@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Video</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <ul class="nav nav-tabs" id="navy">
+        <li class="nav-item">
+            <img src="images/Iconcreme-Halloween-Bat.512.png" width="70">
+        </li>
+        <li class="nav-item">
+            <p>HALLOWEEN FESTIVAL</p>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="trangchu.html">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="trungbay.html">Trưng bày sản phẩm</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="bosuutap.html">Bộ sưu tập</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="dangky.html">Đăng ký</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="lienhe.html">Liên hệ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#" style="background-color: rgb(85, 75, 61);color: orangered;">Video</a>
+        </li>
+        <li class="nav-item">
+            <div><button id="nhacnen">Bật nhạc</button></div>
+        </li>
+    </ul>
+    <div class="trangchu" style="height: 550px;">
+        <div class="container" style="display: flex; justify-content: center;align-items: center;padding-top: 100px;">
+            <video width="800" height="400" controls autoplay >
+                <source src="images/video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <audio id="nhac" loop>
+        <source src="images/sounds.wav" type="audio/wav">
+    </audio>
+    <script>
+        let playing = false;
+        nhacnen.addEventListener("click", () => {
+        if (playing) {
+            nhac.pause();
+            nhacnen.textContent = "Phát nhạc";
+            playing=false;
+        } else {
+            nhac.play();
+            nhacnen.textContent = "Tắt nhạc";
+            playing=true;
+        }
+        });
+    </script>
+</body>
+</html>

@@ -2,6 +2,7 @@
     #content{
         background-image: url(images/bg.gif);
         background-size: cover;
+        background-repeat: repeat;
     }
     .wrapper {
     height: 100%;
@@ -211,5 +212,17 @@
         60% {left: 1050px;top: 350px;}
         80% {left: 850px;top: 300px;}
         100% {left: 550px;top: 300px;transform: scaleX(-1);}
+    }
+    #nhacnen{
+        border-radius: 50px;
+        /* position:absolute; */
+        background-color: rgb(91, 91, 255);
+        padding: 5spx;
+        width:50px;
+        height: 50px;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        display: flex;
     }
 }
